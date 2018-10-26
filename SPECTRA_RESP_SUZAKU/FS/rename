@@ -1,0 +1,8 @@
+while read line; do
+  if ! read -u 3 line2
+  then
+    break
+  fi
+  echo "$line-->$line2"
+  mv $line $line2
+done < Listainicial.txt 3< Listafinal.txt
